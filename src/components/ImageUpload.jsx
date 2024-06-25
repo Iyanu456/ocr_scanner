@@ -29,14 +29,14 @@ const ImageUpload = () => {
   };
 
   return (
-    <div className="flex items-center gap-5">
+    <div className={`grid border rounded-md p-4 ${selectedImage ? "grid grid-cols-[1fr,1fr] lg:w-[60vw]" : "grid-cols-[1fr] w-[25em]"} justify-center center-align gap-5`}>
       <div className='grid'>
       <button
         onClick={handleButtonClick}
         className="mb-4 px-4 py-3 w-full border-dashed border-[black] font-semibold text-[1.1em] border-[0.15em] rounded cursor-pointer"
       >
        
-        Choose file {fileName && (<><span className='p-2'> - </span>
+        Choose a file {fileName && (<><span className='p-2'> - </span>
         <span className='font-normal '>{fileName}</span>
       </>)}
       </button>
@@ -51,7 +51,7 @@ const ImageUpload = () => {
         value={ocrText}
         readOnly
         rows="10"
-        className="w-[25em] p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-gray-300 rounded"
       ></textarea>
       </div>
      
@@ -59,7 +59,7 @@ const ImageUpload = () => {
         <img
           src={selectedImage}
           alt="Selected"
-          className="max-w-[26em] mb-4 border border-gray-300"
+          className="w-full h-full cover my-auto mb-4 border border-gray-300"
         />
       )}
       
