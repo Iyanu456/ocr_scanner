@@ -36,9 +36,9 @@ const ImageUpload = () => {
         className="mb-4 px-4 py-3 w-full border-dashed border-[black] font-semibold text-[1.1em] border-[0.15em] rounded cursor-pointer"
       >
        
-        Choose file {fileName && (
-        <span >{fileName}</span>
-      )}
+        Choose file {fileName && (<><span className='p-2'> - </span>
+        <span className='font-normal '>{fileName}</span>
+      </>)}
       </button>
       
       <input
