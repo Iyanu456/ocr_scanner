@@ -29,8 +29,8 @@ const ImageUpload = () => {
   };
 
   return (
-    <div className={`grid border rounded-md p-4 ${selectedImage ? "grid grid-cols-[1fr,1fr] lg:w-[60vw]" : "grid-cols-[1fr] w-[25em]"} justify-center center-align gap-5`}>
-      <div className='grid'>
+    <div className={`flex flex-wrap md:grid rounded-md md:p-4 lg:p-4 ${selectedImage ? "lg:grid lg:grid-cols-[1fr,1fr] lg:w-[65vw]" : "lg:grid-cols-[1fr] lg:w-[25em]"} justify-center center-align gap-5`}>
+      <div className='flex flex-col w-[90vw]'>
       <button
         onClick={handleButtonClick}
         className="mb-4 px-4 py-3 w-full border-dashed border-[black] font-semibold text-[1.1em] border-[0.15em] rounded cursor-pointer"
@@ -59,7 +59,7 @@ const ImageUpload = () => {
         <img
           src={selectedImage}
           alt="Selected"
-          className="w-full h-full cover my-auto mb-4 border border-gray-300"
+          className="hidden  md:block lg:block w-full h-full object-cover my-auto mb-4 border border-gray-300"
         />
       )}
       
